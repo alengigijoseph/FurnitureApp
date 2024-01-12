@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ui.shop.ShopFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#008AAA96"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/homesearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_rounded_corners"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/_10mdp"
+            android:drawableTint="#251A1E"
+            android:gravity="center|start"
+            android:paddingVertical="@dimen/_10mdp"
+            android:paddingStart="@dimen/_10mdp"
+            android:scaleType="fitXY"
+            android:text="What are you looking for?"
+            android:textColor="#B89EA9"
+            android:textSize="@dimen/_10mdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/homenotification"
+            android:layout_width="@dimen/_35mdp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_rounded_corners"
+            android:backgroundTint="#8AAA96"
+            android:padding="@dimen/_7mdp"
+            android:scaleType="fitXY"
+            app:tint="#FEFEFE"
+            app:srcCompat="@drawable/ic_notification2"
+            app:layout_constraintBottom_toBottomOf="@+id/homesearchBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/homesearchBar"
+            app:layout_constraintTop_toTopOf="@+id/homesearchBar"
+            app:layout_constraintVertical_bias="0.0"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/homensv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+        tools:context=".ui.shop.FurnitureFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<View
+                android:id="@+id/view5"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_3mdp"
+                android:layout_marginTop="20dp"
+                android:background="#51FE897F"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/furniturenewrv" />-->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/offerzonevp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150mdp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollvieww">
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/shopci"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50mdp"
+                android:layout_marginTop="-50dp"
+                android:background="#00000000"
+                app:layout_constraintBottom_toBottomOf="@id/offerzonevp"
+                app:layout_constraintStart_toStartOf="@id/offerzonevp"
+                app:layout_constraintEnd_toEndOf="@id/offerzonevp"/>
+
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="New Arrival"
+                android:textColor="#572424"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/offerzonevp" />
+
+            <Button
+                android:id="@+id/newarrviewall"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/inter_semibold"
+                android:text="View all"
+                android:textSize="@dimen/_10mdp"
+                android:textColor="#572424"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <ScrollView
+                android:id="@+id/scrollvieww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="@dimen/_10mdp"
+                        android:paddingVertical="@dimen/_10mdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/onee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/sofafur"
+                                android:layout_width="@dimen/_60mdp"
+                                android:layout_height="@dimen/_60mdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sofa"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Sofa"
+                                android:textColor="#010A23"
+                                android:textSize="10sp"
+                                app:layout_constraintLeft_toLeftOf="@id/sofafur"
+                                app:layout_constraintRight_toRightOf="@id/sofafur"
+                                app:layout_constraintTop_toBottomOf="@id/sofafur" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/twoo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/onee"
+                            app:layout_constraintStart_toEndOf="@id/onee"
+                            app:layout_constraintTop_toTopOf="@+id/onee">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/chairfur"
+                                android:layout_width="80dp"
+                                android:layout_height="74dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/chair"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Beds"
+                                android:textColor="#010A23"
+                                android:textSize="10sp"
+                                app:layout_constraintLeft_toLeftOf="@id/chairfur"
+                                app:layout_constraintRight_toRightOf="@id/chairfur"
+                                app:layout_constraintTop_toBottomOf="@id/chairfur" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/twoo"
+                            app:layout_constraintStart_toEndOf="@id/twoo"
+                            app:layout_constraintTop_toTopOf="@+id/twoo">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/Tablefur"
+                                android:layout_width="@dimen/_60mdp"
+                                android:layout_height="@dimen/_60mdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/table"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Wardrobe &amp;\nOrganizers"
+                                android:textColor="#010A23"
+                                android:textSize="8sp"
+                                app:layout_constraintLeft_toLeftOf="@id/Tablefur"
+                                app:layout_constraintRight_toRightOf="@id/Tablefur"
+                                app:layout_constraintTop_toBottomOf="@id/Tablefur" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/three"
+                            app:layout_constraintStart_toEndOf="@id/three"
+                            app:layout_constraintTop_toTopOf="@+id/three">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/bedfur"
+                                android:layout_width="@dimen/_60mdp"
+                                android:layout_height="@dimen/_60mdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/bed"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Drawers"
+                                android:textColor="#010A23"
+                                android:textSize="10sp"
+                                app:layout_constraintLeft_toLeftOf="@id/bedfur"
+                                app:layout_constraintRight_toRightOf="@id/bedfur"
+                                app:layout_constraintTop_toBottomOf="@id/bedfur" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/four"
+                            app:layout_constraintStart_toEndOf="@id/four"
+                            app:layout_constraintTop_toTopOf="@+id/four">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/closetfur"
+                                android:layout_width="@dimen/_60mdp"
+                                android:layout_height="@dimen/_60mdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/closet"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Recliner and \nRocker"
+                                android:textColor="#010A23"
+                                android:textSize="10sp"
+                                app:layout_constraintLeft_toLeftOf="@id/closetfur"
+                                app:layout_constraintRight_toRightOf="@id/closetfur"
+                                app:layout_constraintTop_toBottomOf="@id/closetfur" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/six"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/five"
+                            app:layout_constraintStart_toEndOf="@id/five"
+                            app:layout_constraintTop_toTopOf="@+id/five">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/Tvstandfur"
+                                android:layout_width="@dimen/_60mdp"
+                                android:layout_height="@dimen/_60mdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tvstand"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="TV stands"
+                                android:textColor="#010A23"
+                                android:textSize="10sp"
+                                app:layout_constraintLeft_toLeftOf="@id/Tvstandfur"
+                                app:layout_constraintRight_toRightOf="@id/Tvstandfur"
+                                app:layout_constraintTop_toBottomOf="@id/Tvstandfur" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/seven"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/six"
+                            app:layout_constraintStart_toEndOf="@id/six"
+                            app:layout_constraintTop_toTopOf="@+id/six">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/Kids"
+                                android:layout_width="@dimen/_60mdp"
+                                android:layout_height="@dimen/_60mdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/kids"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Kids"
+                                android:textColor="#010A23"
+                                android:textSize="10sp"
+                                app:layout_constraintLeft_toLeftOf="@id/Kids"
+                                app:layout_constraintRight_toRightOf="@id/Kids"
+                                app:layout_constraintTop_toBottomOf="@id/Kids" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/seven"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/seven"
+                            app:layout_constraintTop_toTopOf="@+id/seven">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/officefur"
+                                android:layout_width="@dimen/_60mdp"
+                                android:layout_height="@dimen/_60mdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/office2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Office"
+                                android:textColor="#010A23"
+                                android:textSize="10sp"
+                                app:layout_constraintLeft_toLeftOf="@id/officefur"
+                                app:layout_constraintRight_toRightOf="@id/officefur"
+                                app:layout_constraintTop_toBottomOf="@id/officefur" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </HorizontalScrollView>
+            </ScrollView>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/furniturenewrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmernewarrival"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/new_arrival_shimmer" />
+
+                    <include layout="@layout/new_arrival_shimmer" />
+
+                    <include layout="@layout/new_arrival_shimmer" />
+
+                    <include layout="@layout/new_arrival_shimmer" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

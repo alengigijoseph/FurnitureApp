@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.OtpActivity">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="EDIT NUMBER"
+        android:textColor="#050505"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/otpGrid"
+        app:layout_constraintTop_toBottomOf="@+id/otpGrid" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="RESEND OTP"
+        android:textColor="#050505"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/otpGrid"
+        app:layout_constraintTop_toBottomOf="@+id/otpGrid" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csvvv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150mdp"
+        android:background="@drawable/gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Almost there..please enter the 5 digit OTP that we just \nsent on 9999999999"
+            android:textColor="#FFFDFD"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="sans-serif-black"
+            android:text="OTP Verification"
+            android:textColor="#FFFDFD"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <GridLayout
+        android:id="@+id/otpGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:columnCount="5"
+        android:rowCount="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/csvvv">
+
+        <EditText
+            android:id="@+id/etDigit1"
+            style="@style/OtpEditTextStyle"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/etDigit2"
+            style="@style/OtpEditTextStyle"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/etDigit3"
+            style="@style/OtpEditTextStyle"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/etDigit4"
+            style="@style/OtpEditTextStyle"
+            android:inputType="number"
+            android:maxLength="1" />
+        <EditText
+            android:id="@+id/etDigit5"
+            style="@style/OtpEditTextStyle"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <!-- Add more EditText fields for additional digits if needed -->
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Verify OTP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

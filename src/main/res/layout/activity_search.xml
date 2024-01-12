@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ui.common.SearchActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3333"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#89A995"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/notification2"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"
+            android:background="#00FFFFFF"
+            android:drawablePadding="@dimen/_10mdp"
+            android:padding="@dimen/_10mdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_back"
+            android:text="What are you looking for?"
+            app:layout_constraintBottom_toBottomOf="@+id/searchitembar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/searchitembar"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="@color/white" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchitembar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40mdp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/search_bar_bg"
+            android:drawableStart="@drawable/ic_search"
+            app:closeIcon="@null"
+            app:defaultQueryHint="Search for Products"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/notification2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchitemrv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3333"
+        tools:listitem="@layout/search_container" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

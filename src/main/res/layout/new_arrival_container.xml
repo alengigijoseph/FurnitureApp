@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newarrivalcontain"
+    android:layout_width="@dimen/_120mdp"
+    android:layout_height="@dimen/_250mdp"
+    android:layout_marginStart="@dimen/_5mdp"
+    android:adjustViewBounds="true"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/offerpricenewarr100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#00FDFDFD"
+        android:fontFamily="@font/inter_semibold"
+        android:gravity="start"
+        android:text="Price"
+        android:textColor="#201F1F"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/seconditemorgprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="#00FDFDFD"
+        android:fontFamily="@font/inter_semibold"
+        android:gravity="start"
+        android:text="price"
+        android:textColor="#858282"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/offerpricenewarr100"
+        app:layout_constraintStart_toEndOf="@+id/offerpricenewarr100"
+        app:layout_constraintTop_toTopOf="@+id/offerpricenewarr100" />
+
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_rounded_corners"
+        android:backgroundTint="#FE897F"
+        android:paddingHorizontal="@dimen/_10mdp"
+        android:text="New"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newimage22">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/newarritemname200"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="#00FDFDFD"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:gravity="start"
+        android:lines="2"
+        android:text="product name"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seconditemorgprice" />
+
+    <RatingBar
+        android:id="@+id/seconditemrating"
+        style="@style/SmallRatingBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:numStars="5"
+        android:rating="4"
+        app:layout_constraintStart_toStartOf="@+id/newarritemname200"
+        app:layout_constraintTop_toBottomOf="@+id/newarritemname200" />
+
+
+    <ImageView
+        android:id="@+id/newimage22"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <ImageButton
+        android:id="@+id/seconditemwish"
+        android:layout_width="@dimen/_18mdp"
+        android:layout_height="@dimen/_18mdp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="@dimen/_2mdp"
+        android:background="@drawable/circle_bg"
+        android:backgroundTint="#FBFAFA"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_heart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#000000" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.explore.TrendingFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cbb2"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/nsv22"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_1mdp"
+                        android:scaleType="fitXY"
+                        android:text="View Items in\nyour Space"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_7mdp"
+                        app:icon="@drawable/ic_ar"
+                        app:iconGravity="textTop"
+                        app:iconSize="50dp"
+                        app:iconTint="#57815B" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_1mdp"
+                        android:scaleType="fitXY"
+                        android:text="Create your\nown Designs"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_7mdp"
+                        app:icon="@drawable/ic_custom"
+                        app:iconGravity="textTop"
+                        app:iconSize="50dp"
+                        app:iconTint="#57815B" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_1mdp"
+                        android:paddingTop="@dimen/_7mdp"
+                        android:scaleType="fitXY"
+                        android:text="Swap for New\n Furniture"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_7mdp"
+                        app:icon="@drawable/ic_swap"
+                        app:iconGravity="textTop"
+                        app:iconSize="45dp"
+                        app:iconTint="#57815B" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_1mdp"
+                        android:paddingTop="@dimen/_7mdp"
+                        android:scaleType="fitXY"
+                        android:text="Donate Old\n Furniture"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_7mdp"
+                        app:icon="@drawable/ic_donate"
+                        app:iconGravity="textTop"
+                        app:iconSize="45dp"
+                        app:iconTint="#57815B" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_rounded_corners"
+                    android:fontFamily="@font/poppins"
+                    android:paddingHorizontal="@dimen/_20mdp"
+                    android:paddingVertical="@dimen/_10mdp"
+                    android:text="Our Services"
+                    android:textColor="#57815B"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ScrollView
+                app:layout_constraintTop_toBottomOf="@id/cbb"
+                android:id="@+id/nsv22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FEFEFE"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteY="85dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/bg_rounded_corners"
+                        android:fontFamily="@font/poppins"
+                        android:paddingHorizontal="@dimen/_20mdp"
+                        android:paddingVertical="@dimen/_10mdp"
+                        android:text="Choose your Style"
+                        android:textColor="#57815B"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/textView4">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2222"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FEFEFE"
+                                android:paddingHorizontal="@dimen/_10mdp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/futuristic"
+                                    android:layout_width="@dimen/_100mdp"
+                                    android:layout_height="@dimen/_150mdp"
+                                    android:layout_marginStart="15dp"
+                                    app:cardCornerRadius="5dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/vintage"
+                                    app:layout_constraintStart_toEndOf="@+id/vintage"
+                                    app:layout_constraintTop_toTopOf="@+id/vintage">
+
+                                    <ImageView
+                                        android:id="@+id/futuristicciv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/futuristicroom"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_20mdp"
+                                        android:layout_gravity="bottom"
+                                        android:background="@drawable/style_gradient"  />
+
+                                    <TextView
+                                        android:id="@+id/futuristict"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom|center"
+                                        android:layout_marginBottom="@dimen/_5mdp"
+                                        android:fontFamily="@font/adamina"
+                                        android:text="Futuristic"
+                                        android:textColor="#FEFEFF"
+                                        android:textSize="10sp" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/vintage"
+                                    android:layout_width="@dimen/_100mdp"
+                                    android:layout_height="@dimen/_150mdp"
+                                    android:layout_marginStart="15dp"
+                                    app:cardCornerRadius="5dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/eclectic"
+                                    app:layout_constraintStart_toEndOf="@+id/eclectic"
+                                    app:layout_constraintTop_toTopOf="@+id/eclectic">
+
+                                    <ImageView
+                                        android:id="@+id/vintageciv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/vintageroom"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_20mdp"
+                                        android:layout_gravity="bottom"
+                                        android:background="@drawable/style_gradient"  />
+
+                                    <TextView
+                                        android:id="@+id/vintaget"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom|center"
+                                        android:layout_marginBottom="@dimen/_5mdp"
+                                        android:fontFamily="@font/adamina"
+                                        android:text="Vintage"
+                                        android:textColor="#FEFEFF"
+                                        android:textSize="10sp" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/eclectic"
+                                    android:layout_width="@dimen/_100mdp"
+                                    android:layout_height="@dimen/_150mdp"
+                                    android:layout_marginStart="15dp"
+                                    app:cardCornerRadius="5dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/minimalist"
+                                    app:layout_constraintStart_toEndOf="@+id/minimalist"
+                                    app:layout_constraintTop_toTopOf="@+id/minimalist">
+
+                                    <ImageView
+                                        android:id="@+id/eclecticciv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/eclecticroom"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_20mdp"
+                                        android:layout_gravity="bottom"
+                                        android:background="@drawable/style_gradient"  />
+
+                                    <TextView
+                                        android:id="@+id/eclectict"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom|center"
+                                        android:layout_marginBottom="@dimen/_5mdp"
+                                        android:fontFamily="@font/adamina"
+                                        android:text="Eclectic"
+                                        android:textColor="#FEFEFF"
+                                        android:textSize="10sp" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/minimalist"
+                                    android:layout_width="@dimen/_100mdp"
+                                    android:layout_height="@dimen/_150mdp"
+                                    android:layout_marginStart="15dp"
+                                    app:cardCornerRadius="5dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/modern"
+                                    app:layout_constraintStart_toEndOf="@+id/modern"
+                                    app:layout_constraintTop_toTopOf="@+id/modern">
+
+                                    <ImageView
+                                        android:id="@+id/minimalistciv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/minimalistroom"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_20mdp"
+                                        android:layout_gravity="bottom"
+                                        android:background="@drawable/style_gradient"  />
+
+                                    <TextView
+                                        android:id="@+id/minimalistt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom|center"
+                                        android:layout_marginBottom="@dimen/_5mdp"
+                                        android:fontFamily="@font/adamina"
+                                        android:text="Minimalist"
+                                        android:textColor="#FEFEFF"
+                                        android:textSize="10sp" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/modern"
+                                    android:layout_width="@dimen/_100mdp"
+                                    android:layout_height="@dimen/_150mdp"
+                                    android:layout_marginBottom="20dp"
+                                    app:cardCornerRadius="5dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/modernciv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/modernroom"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_20mdp"
+                                        android:layout_gravity="bottom"
+                                        android:background="@drawable/style_gradient" />
+
+                                    <TextView
+                                        android:id="@+id/modernt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom|center"
+                                        android:layout_marginBottom="@dimen/_5mdp"
+                                        android:fontFamily="@font/adamina"
+                                        android:text="Modern"
+                                        android:textColor="#FEFEFF"
+                                        android:textSize="10sp" />
+
+
+                                </androidx.cardview.widget.CardView>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </ScrollView>
+
+            <FrameLayout
+                android:id="@+id/cbb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/essentialsvp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <me.relex.circleindicator.CircleIndicator3
+                        android:id="@+id/exploreci"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50mdp"
+                        android:layout_marginTop="-50dp"
+                        android:background="#00000000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/essentialsvp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/exploreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50mdp"
+                        android:background="#00433636"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/rosarivo"
+                            android:text="Top Collections"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_400mdp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cbb2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/timetravellerscollection"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/adamina"
+                    android:text="The Time Traveller Collection"
+                    android:textColor="#FBFBFB"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120mdp"
+                    android:background="#7A000000"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/timeRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Embrace the Past, Redefine the Present. Vintage inspirations meet modern aesthetics in this extraordinary fusion of eras. Elevate your space with pieces that bridge time and style effortlessly."
+                    android:textColor="#FFFCFC"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView30"
+                    app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

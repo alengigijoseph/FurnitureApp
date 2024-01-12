@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.common.SearchResultActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/constraintLayout7"
+        android:id="@+id/searcheditemsrv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linlay"
+         />
+
+    <LinearLayout
+        android:id="@+id/linlay"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingVertical="@dimen/_5mdp">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/sort2"
+            android:layout_width="@dimen/_100mdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_corners"
+            android:gravity="center|center_horizontal"
+            android:text="Sort"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:icon="@drawable/ic_sort"
+            app:iconGravity="start"
+            app:iconSize="15dp"
+            app:iconTint="@color/white" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/sort"
+            android:layout_width="@dimen/_100mdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/bg_rounded_corners"
+            android:gravity="center|center_horizontal"
+            android:text="Filter"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:icon="@drawable/ic_adjust"
+            app:iconGravity="start"
+            app:iconSize="15dp"
+            app:iconTint="@color/white" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/constraintLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="@dimen/_30mdp"
+            android:layout_height="@dimen/_30mdp"
+            android:layout_marginEnd="20dp"
+            android:background="#00FFFFFF"
+            android:padding="@dimen/_5mdp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageButton3"
+            app:srcCompat="@drawable/ic_shopbag" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="@dimen/_30mdp"
+            android:layout_height="@dimen/_30mdp"
+            android:layout_marginEnd="20dp"
+            android:background="#00FFFFFF"
+            android:padding="@dimen/_5mdp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/sritemname"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+            app:layout_constraintTop_toTopOf="@+id/sritemname"
+            app:srcCompat="@drawable/ic_search" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="@dimen/_30mdp"
+            android:layout_height="@dimen/_30mdp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#00FFFFFF"
+            android:padding="@dimen/_5mdp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/sritemname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Item Name"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+            app:layout_constraintStart_toEndOf="@+id/imageButton2"
+            app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_logo_two"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_two_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CustomAr"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".ui.user.pers.address.AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.intro.IntroActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.common.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.helpnsupport.ContactUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.helpnsupport.CustomerSuppActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.pers.PaymentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.pers.address.AddressesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.pers.CommunicationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.pers.AppSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.top.OrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.top.WishlistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.top.CollectionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.top.AccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.common.ItemInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.common.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.common.SearchResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.common.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

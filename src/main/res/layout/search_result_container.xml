@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="@dimen/_10mdp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/_5mdp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/firstItemcontain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/_5mdp">
+
+        <RatingBar
+            android:id="@+id/firstitemrating"
+            style="@style/SmallRatingBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:numStars="5"
+            android:rating="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/firstitemorgprice"
+            app:layout_constraintStart_toStartOf="@+id/firstitemoffperc"
+            app:layout_constraintTop_toBottomOf="@+id/firstitemoffperc" />
+
+        <ImageView
+            android:id="@+id/firstitemimage"
+            android:layout_width="wrap_content"
+            android:layout_height="155dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/firstitemofferprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="#00FDFDFD"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="start"
+            android:text="R̶s̶ 1̶0̶0̶0̶"
+            android:textColor="#201F1F"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/firstitemoffperc"
+            app:layout_constraintStart_toEndOf="@+id/firstitemoffperc"
+            app:layout_constraintTop_toTopOf="@+id/firstitemoffperc" />
+
+        <TextView
+            android:id="@+id/firstitemname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="#00FDFDFD"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:gravity="start"
+            android:lines="2"
+            android:text="product name"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/firstitemimage"
+            app:layout_constraintStart_toStartOf="@+id/firstitemimage"
+            app:layout_constraintTop_toBottomOf="@+id/firstitemimage" />
+
+        <ImageButton
+            android:id="@+id/firstitemwish"
+            android:layout_width="@dimen/_18mdp"
+            android:layout_height="@dimen/_18mdp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#D8D4D4" />
+
+        <TextView
+            android:id="@+id/firstitemorgprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="#00FDFDFD"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="start"
+            android:text="R̶s̶ 1̶0̶0̶0̶"
+            android:textColor="#858282"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/firstitemofferprice"
+            app:layout_constraintStart_toEndOf="@+id/firstitemofferprice"
+            app:layout_constraintTop_toTopOf="@+id/firstitemofferprice" />
+
+        <TextView
+            android:id="@+id/firstitemoffperc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#00FDFDFD"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="start"
+            android:text="15% off"
+            android:textColor="#518D33"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/firstitemname"
+            app:layout_constraintTop_toBottomOf="@+id/firstitemname" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

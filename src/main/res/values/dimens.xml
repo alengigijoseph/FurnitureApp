@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tab_padding">8dp</dimen>
+    <dimen name="dialog_bottom_margin">60dp</dimen>
+    <dimen name="selected_circular_image_size">80dp</dimen>
+    <dimen name="unselected_circular_image_size">60dp</dimen>
+</resources>

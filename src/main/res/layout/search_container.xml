@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/searchitemcontain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/closeoropen"
+        android:layout_width="@dimen/_13mdp"
+        android:layout_height="@dimen/_13mdp"
+        android:layout_marginEnd="20dp"
+        android:background="#00FFFFFF"
+        android:tint="#070707"
+        app:layout_constraintBottom_toBottomOf="@+id/searchitemname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchitemname"
+        app:srcCompat="@drawable/ic_close" />
+
+    <ImageButton
+        android:id="@+id/recentornew"
+        android:layout_width="@dimen/_16mdp"
+        android:layout_height="@dimen/_16mdp"
+        android:layout_marginStart="20dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        android:tint="#070707"
+        app:layout_constraintBottom_toBottomOf="@+id/searchitemname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchitemname"
+        app:srcCompat="@drawable/ic_recent" />
+
+    <TextView
+        android:id="@+id/searchitemname"
+        android:layout_width="@dimen/_200mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="itemname"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/recentornew"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="#CDB1ACAC"
+        app:layout_constraintTop_toBottomOf="@+id/searchitemname" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

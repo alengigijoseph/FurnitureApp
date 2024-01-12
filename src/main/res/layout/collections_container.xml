@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/collectioncard"
+    android:layout_marginVertical="@dimen/_5mdp"
+    android:layout_marginHorizontal="@dimen/_8mdp"
+    android:layout_width="wrap_content"
+    app:cardCornerRadius="@dimen/_10mdp"
+    android:layout_height="@dimen/_100mdp">
+
+
+            <ImageView
+                android:id="@+id/collectionimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true" />
+
+
+</androidx.cardview.widget.CardView>

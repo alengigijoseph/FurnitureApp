@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF9F9"
+    tools:context=".ui.auth.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csvvv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150mdp"
+        android:background="@drawable/gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Sign in to your \n Account"
+            android:textColor="#FFFDFD"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="sign in to your account"
+            android:textColor="#FFFDFD"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/lblAlreadyHaveAccount3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Mobile"
+        android:textColor="#0B0B0B"
+        app:layout_constraintStart_toStartOf="@+id/logphonecontain"
+        app:layout_constraintTop_toBottomOf="@+id/csvvv" />
+
+    <TextView
+        android:id="@+id/lblAlreadyHaveAccount33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Password"
+        android:textColor="#0B0B0B"
+        app:layout_constraintStart_toStartOf="@+id/logphonecontain"
+        app:layout_constraintTop_toBottomOf="@+id/logphonecontain" />
+
+    <TextView
+        android:id="@+id/lblAlreadyHaveAccounttt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="On clicking continue, I agree to Terms of Service &amp; \nPrivacy Policy"
+        android:textColor="#817D7D"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/logphonecontain"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="@dimen/_250mdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Mobile Number
+"
+        android:textColorHint="#BDBBBB"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="#F4F1F1"
+        app:boxStrokeErrorColor="#ED0A0A"
+        app:helperText="@string/required"
+        app:helperTextTextColor="#0AE627"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblAlreadyHaveAccount3"
+        app:placeholderTextColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/logphone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:inputType="text"
+            android:lines="1"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/logpasscontain"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="@dimen/_250mdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:textColorHint="#BDBBBB"
+        app:boxStrokeColor="#F4F1F1"
+        app:boxStrokeErrorColor="#ED0A0A"
+        app:helperText="@string/required"
+        app:helperTextTextColor="#0AE627"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblAlreadyHaveAccount33"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/logpass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logpasscontain" />
+
+
+    <TextView
+        android:id="@+id/lblDontHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="60dp"
+        android:text="Don't have an account ?"
+        android:textColor="#040303"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblAlreadyHaveAccounttt" />
+
+    <TextView
+        android:id="@+id/regg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/lblDontHaveAccount"
+        android:text="Register"
+        android:textColor="#89A995"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/lblDontHaveAccount"
+        app:layout_constraintTop_toTopOf="@id/lblDontHaveAccount" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
